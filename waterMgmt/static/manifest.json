@@ -1,6 +1,6 @@
 {
-  "name": "watermgmt",
-  "short_name": "mgmt",
+  "name": "Project Neptune",
+  "short_name": "Neptune",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "background_color": "#0D0C1A",
+  "theme_color": "#035390"
 }
