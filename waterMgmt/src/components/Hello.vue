@@ -1,3 +1,5 @@
+<!-- npm install chromedriver@87.0.1 -->
+
 <template>
 <div id="app">
 
@@ -116,7 +118,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 .login-page .wallpaper-login {
   background: url(https://images.unsplash.com/photo-1615800634551-745f94ffa49d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=scale&w=2242&q=100&orient=8) no-repeat center center;
-  transform: rotate(-180deg);
   background-size: cover;
   height: 100%;
   position: relative;
