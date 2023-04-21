@@ -17,20 +17,28 @@
                <form class="form-group">
                   <input v-model="emailLogin" type="email" class="form-control" placeholder="Email" required>
                   <input v-model="passwordLogin" type="password" class="form-control" placeholder="Password" required>
-                  <input type='submit' class="btn btn-primary" value="Submit" @click="doLogin">
-                  <p><a href="#" @click="registerActive = !registerActive, emptyFields = false"></a>
-                  </p>
-                  <p><a href="#"></a></p>
+                  <input type="submit" class="btn btn-primary" value="Submit" @click="doLogin">
+                  <a class="forgot" href="#">Forgot your password?</a>
                </form>
             </div>
 
             <div v-else class="card register" v-bind:class="{ error: emptyFields }">
+               <h1>Sign Up</h1>
+               <form class="form-group">
+                  <input v-model="emailReg" type="email" class="form-control" placeholder="Email" required>
+                  <input v-model="passwordReg" type="password" class="form-control" placeholder="Password" required>
+                  <input v-model="confirmReg" type="password" class="form-control" placeholder="Confirm Password" required>
+                  <input type="submit" class="btn btn-primary" @click="doRegister">
+                  <p>Already have an account? <a href="#" @click="registerActive = !registerActive, emptyFields = false">Sign in here</a>
+                  </p>
+               </form>
             </div>
          </div>
       </div>
 
    </div>
 </div>
+
 </div>
 </template>
 
@@ -73,7 +81,7 @@ export default {
     align-self: center;
     left:5vw;
     width: 15em;
-    height: 20em;
+    height: 25em;
     background-color: white;
     border:black thin;
     border-radius: 0.25rem;
@@ -92,8 +100,14 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .card {
   padding: 20px;
 }
-.form-group input {
-  margin-bottom: 10px;
+.form-control {
+  margin-bottom: 5px;
+  border-radius: .2rem;
+  border: 1px;
+  border-style: solid;
+  border-color: lightgray;
+  height: 1.25rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .btn-primary {
     display: block;
@@ -102,6 +116,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     color: white;
     align-self: center;
     border-radius: 0.25rem;
+    margin-top: 30px;
     font: 1em sans-serif;
     font-weight: 600;
     text-align: center;
@@ -109,7 +124,14 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     font-size: 16px;
     height: 30px;
     width: 70px;
+    right: 1.5rem;
+    position: absolute;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.forgot {
+    padding: 10px;
+    font-size: .7rem;
+    position: relative;
 }
 .login-page {
   justify-content: center;
@@ -139,7 +161,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   z-index: -1;
 }
 .login-page h1 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   color: black;
 }
 .error {

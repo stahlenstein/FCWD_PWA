@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <span></span>
+      <span>Neptune</span>
     </header>
     <main>
       <router-view></router-view>
@@ -33,7 +33,7 @@ main {
 }
 
 header {
-  margin: 0;
+  margin: 0px;
   height: 0px;
   padding: 0 16px 0 24px;
   background-color: #ffffff;
@@ -43,11 +43,17 @@ header {
 header span {
   display: block;
   position: relative;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1;
   letter-spacing: .02em;
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
+  z-index: 1;
+  color: #00000050;
+}
+
+footer {
+  margin: 0px;
 }
 </style>
